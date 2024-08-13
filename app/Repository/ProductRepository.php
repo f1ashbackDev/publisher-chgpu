@@ -2,7 +2,9 @@
 
 namespace App\Repository;
 
-class ProductRepository
+use App\Repository\Interfaces\ProductRepositoryInterface;
+
+class ProductRepository implements ProductRepositoryInterface
 {
 
 }

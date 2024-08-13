@@ -2,7 +2,9 @@
 
 namespace App\Repository;
 
-class CategoryRepository
+use App\Repository\Interfaces\CategoryRespositoryInterface;
+
+class CategoryRepository implements CategoryRespositoryInterface
 {
 
 }

@@ -2,7 +2,9 @@
 
 namespace App\Repository;
 
-class OrderRespository
+use App\Repository\Interfaces\OrderRepositoryInterfaces;
+
+class OrderRespository implements OrderRepositoryInterfaces
 {
 
 }

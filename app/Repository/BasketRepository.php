@@ -2,7 +2,9 @@
 
 namespace App\Repository;
 
-class BasketRepository
+use App\Repository\Interfaces\BasketRepositoryInterface;
+
+class BasketRepository implements BasketRepositoryInterface
 {
 
 }

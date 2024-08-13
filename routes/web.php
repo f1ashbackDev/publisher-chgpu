@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use \App\Http\Controllers\UserController;
+use \App\Http\Controllers\WebController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,3 +14,7 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+Route::get('/', [WebController::class, 'index'])->name('web.index');
+Route::get('/login',[UserController::class, 'loginPage'])->name('user.loginPage');
+Route::get('/register',[UserController::class, 'registerPage'])->name('user.registerPage');
