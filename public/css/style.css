@@ -1,0 +1,155 @@
+body{
+    font-family: "Exo 2", sans-serif;
+}
+
+a{
+    color: #000;
+    text-decoration: none;
+}
+
+.size-font{
+    font-size: 13px;
+}
+
+header div.container div.d-flex a{
+    margin-left: auto;
+}
+
+.card{
+    width: 18rem;
+}
+
+.btn-red {  
+    color: #fff;
+    background-color: rgba(194, 30, 65, 1);
+    border-color: rgba(194, 30, 65, 1);;
+}
+
+@media (max-width: 576px) {
+    header div.container div.d-flex{
+        flex-direction: column;
+    }
+
+    header div.container div.d-flex a{
+        margin-left: 0;
+    }
+
+    .col div.card{
+        margin-top: 15px;
+        width: 100%;
+    }
+}
+
+@media (min-width: 576px) {
+    .card{
+        width: 15rem;
+        margin-top: 15px;
+    }
+}
+
+@media (min-width: 768px) {
+    .card{
+        width: 18rem;
+        margin-top: 15px;
+    }
+}
+
+/* auth class */
+.login-links {
+    color: black;
+}
+
+.row{
+    display: flex;
+    margin-top: 40px;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-login{
+    max-width: 50%;
+    width: 100%;
+    margin-right: 40px;
+    padding: 25px 40px;
+}
+
+.col-login h2{
+    margin-bottom: 20px;
+}
+
+.row-form{
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.row-form label{
+    margin-bottom: 5px;
+}
+
+.row-form input{
+    padding: 0 15px;
+    max-width: 100%;
+    width: 100%;
+    height: 42px;
+    border: 1px solid rgba(129, 129, 129, .20);
+    border-radius: 5px;
+    color: inherit;
+    background-color: transparent;
+    box-shadow: none;
+    vertical-align: middle;
+    font-size: 14px;
+}
+
+.form-button{
+    width: 100%;
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(255,105,0);
+    box-shadow: none;
+    color: #fff;
+}
+
+
+.form-footer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-footer a{
+    color: black;
+}
+
+.col-register-text{
+    max-width: 50%;
+    text-align: center;
+    border-left: 1px solid rgba(119,119,119,0.2);
+    padding: 25px 40px;
+}
+
+.col-register-text h2{
+    margin-bottom: 20px;
+}
+
+.col-register-text p {
+    margin-bottom: 20px;
+}
+
+.login-links{
+    background-color: rgb(255,105,0);
+    padding: 12px 20px;
+    color: #fff;
+}
+
+/* Test */
+.control{
+    margin-top: 10px;
+}
+.pofw-product-options-wrapper {margin-top: 10px; margin-bottom: 20px;}
+
+.pofw-option{
+    padding: .375rem 2.25rem .375rem .75rem;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
