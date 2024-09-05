@@ -19,7 +19,8 @@ return new class extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->integer('number_phone');
+            $table->boolean('isAdmin')->default(false);
+            $table->string('number_phone', 15);
 
             $table->foreignId('depart_id')
                 ->references('id')

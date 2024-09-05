@@ -1,6 +1,6 @@
-@extends('.layouts.admin')
+@extends('layouts.admin')
 @section('container')
-    <form action="{{ route('admin.store') }}" method="post">
+    <form action="{{ route('admin.departs.store') }}" method="post">
         @csrf
         <input placeholder="Name" name="name"/>
         <input type="number" name="total_count">

@@ -11,7 +11,7 @@ class CategoryRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,15 @@ class CategoryRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|unique:categories'
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Название объязательное',
+            'name.unique' => 'Такая категория уже существует'
         ];
     }
 }

@@ -7,6 +7,10 @@ a{
     text-decoration: none;
 }
 
+a:hover{
+    color: #fff !important;
+}
+
 .size-font{
     font-size: 13px;
 }
@@ -19,7 +23,7 @@ header div.container div.d-flex a{
     width: 18rem;
 }
 
-.btn-red {  
+.btn-red {
     color: #fff;
     background-color: rgba(194, 30, 65, 1);
     border-color: rgba(194, 30, 65, 1);;

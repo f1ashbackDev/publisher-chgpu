@@ -11,7 +11,7 @@ class DepartRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,19 @@ class DepartRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'required|unique:departs,name',
+            'total_count' => 'required|numeric|min:1',
+        ];
+    }
+
+    public function messages(): array
+    {
+        return [
+            'name.required' => 'Название объязательное.',
+            'name.unique' => 'Такой отдел уже существует.',
+            'total_count.required' => 'Поле бюджет не должно быть пустое.',
+            'total_count.numeric' => 'Бюджет должен быть числами.',
+            'total_count.min' => 'Минимально 1 рублей.'
         ];
     }
 }
