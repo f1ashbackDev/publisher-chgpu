@@ -35,6 +35,9 @@
                         <a class="nav-link active text-white fw-bold text-uppercase size-font">О нас</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link active text-white fw-bold text-uppercase size-font">Калькулятор</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link active text-white fw-bold text-uppercase size-font">Контакты</a>
                     </li>
                 </ul>
@@ -48,13 +51,16 @@
                                 <a href="" class="nav-link active text-white fw-bold text-uppercase size-font">Корзина</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link active text-white fw-bold text-uppercase size-font">Выход</a>
+                                <a href="{{ route('user.logout') }}" class="nav-link active text-white fw-bold text-uppercase size-font">Выход</a>
                             </li>
                         </ul>
                     @else
                         <ul class="navbar-nav" id="navbarSupportedContent">
                             <li class="nav-item">
                                 <a href="{{ route('user.loginPage') }}" class="nav-link active text-white fw-bold text-uppercase size-font">Авторизоваться</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="" class="nav-link active text-white fw-bold text-uppercase size-font">Корзина</a>
                             </li>
                         </ul>
                     @endauth

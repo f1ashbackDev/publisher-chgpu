@@ -35,7 +35,7 @@ class UserController extends Controller
     public function login(Request $request)
     {
         $logined = $this->userService->loginUser($request->all());
-        dd($logined);
+        Auth::login($logined);
         return redirect()->route('home');
     }
 

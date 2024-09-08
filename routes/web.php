@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\Admin\DepartController;
+use App\Http\Controllers\User\BasketController;
+use App\Http\Controllers\User\OrderController;
 use Illuminate\Support\Facades\Route;
 use \App\Http\Controllers\UserController;
 use \App\Http\Controllers\WebController;
@@ -23,6 +25,25 @@ Route::get('/register',[UserController::class, 'registerPage'])->name('user.regi
 Route::post('/register', [UserController::class, 'register'])->name('user.register');
 Route::get('/logout',[UserController::class, 'logout'])->name('user.logout');
 
+
+Route::get('/order/', [OrderController::class, 'index'])->name('user.order');
+
+/*
+ * Basket route
+ */
+
+Route::get('/basket/', [BasketController::class, 'index'])->name('user.basket');
+Route::get('/basket/store/{product}', [BasketController::class, 'store'])->name('user.basket.store');
+/*
+ * User route
+*/
+Route::prefix('user')->group(function(){
+
+});
+
+/*
+ * Admin route
+ */
 Route::prefix('admin')->group(function () {
     Route::get('/', [\App\Http\Controllers\Admin\WebController::class, 'index'])->name('admin.indexPage');
     // Departs

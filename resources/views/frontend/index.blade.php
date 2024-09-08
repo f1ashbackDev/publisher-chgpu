@@ -22,7 +22,7 @@
                                 <h5 class="card-title">{{ $product->name }}</h5>
                                 <p class="card-text">{{ $product->description }}</p>
                                 <p class="card-text">Цена: {{ $product->price }} рублей</p>
-                                <a href="#" class="btn btn-red">Купить</a>
+                                <a href="{{ route('user.basket.store', $product->id) }}" class="btn btn-danger">В корзину</a>
                             </div>
                         </div>
                     </div>

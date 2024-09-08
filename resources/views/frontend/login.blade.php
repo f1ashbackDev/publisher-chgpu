@@ -5,19 +5,20 @@
                 <div class="col-login">
                     <h2>Вход</h2>
                     <form action="{{ route('user.login') }}" method="post">
+                        @csrf
                         <div class="row-form">
                             <label>
-                                Имя пользователя или Email
+                                Email
                                 <span class="required">*</span>
                             </label>
-                            <input type="text"/>
+                            <input type="text" name="email"/>
                         </div>
                         <div class="row-form">
                             <label>
                                 Пароль
                                 <span class="required">*</span>
                             </label>
-                            <input type="text">
+                            <input type="text" name="password">
                         </div>
                         <input type="submit" value="Войти" class="form-button">
                         <div class="form-footer">
