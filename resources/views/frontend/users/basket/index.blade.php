@@ -11,5 +11,6 @@
                 </div>
             @endforeach
         @endforeach
+        <a href = "{{ route('user.order') }}" class="btn btn-danger">Оформить</a>
     </section>
 @endsection

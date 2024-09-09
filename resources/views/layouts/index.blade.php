@@ -15,10 +15,10 @@
     <div class="container my-3">
         <div class="d-flex align-items-center">
             <div class="d-flex align-items-center">
-                <img src="images/logo_new.png" class="logotip"/>
-                <p class="m-3">Редакционно-издательский центр</p>
+                <a href="{{ route('home') }}"><img src="images/logo_new.png" class="logotip"/></a>
+                <a href="{{ route('home') }}" class="logotip_link"><p class="m-3">Редакционно-издательский центр</p></a>
             </div>
-            <a class="text-dark text-decoration-none">г. Чебоксары, Карла Маркса, 38, кабинет 205А</a>
+            <a class="logotip_link">г. Чебоксары, Карла Маркса, 38, кабинет 205А</a>
         </div>
     </div>
     <nav class="navbar navbar-expand-lg navbar-light py-3" style="background-color: rgba(194, 30, 65, 1);">
@@ -35,7 +35,7 @@
                         <a class="nav-link active text-white fw-bold text-uppercase size-font">О нас</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active text-white fw-bold text-uppercase size-font">Калькулятор</a>
+                        <a class="nav-link active text-white fw-bold text-uppercase size-font" href="{{ route('web.calculator') }}">Калькулятор</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active text-white fw-bold text-uppercase size-font">Контакты</a>
@@ -48,7 +48,7 @@
                                 <a href="{{ route('user.loginPage') }}" class="nav-link active text-white fw-bold text-uppercase size-font">Личный кабинет</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link active text-white fw-bold text-uppercase size-font">Корзина</a>
+                                <a href="{{ route('user.basket') }}" class="nav-link active text-white fw-bold text-uppercase size-font">Корзина</a>
                             </li>
                             <li class="nav-item">
                                 <a href="{{ route('user.logout') }}" class="nav-link active text-white fw-bold text-uppercase size-font">Выход</a>
@@ -60,7 +60,7 @@
                                 <a href="{{ route('user.loginPage') }}" class="nav-link active text-white fw-bold text-uppercase size-font">Авторизоваться</a>
                             </li>
                             <li class="nav-item">
-                                <a href="" class="nav-link active text-white fw-bold text-uppercase size-font">Корзина</a>
+                                <a href="{{ route('user.basket') }}" class="nav-link active text-white fw-bold text-uppercase size-font">Корзина</a>
                             </li>
                         </ul>
                     @endauth

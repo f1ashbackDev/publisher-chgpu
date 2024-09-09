@@ -24,10 +24,9 @@ Route::post('/login',[UserController::class, 'login'])->name('user.login');
 Route::get('/register',[UserController::class, 'registerPage'])->name('user.registerPage');
 Route::post('/register', [UserController::class, 'register'])->name('user.register');
 Route::get('/logout',[UserController::class, 'logout'])->name('user.logout');
-
-
+Route::get('/calculator', [WebController::class, 'calculator'])->name('web.calculator');
 Route::get('/order/', [OrderController::class, 'index'])->name('user.order');
-
+Route::post('/order/create', [OrderController::class, 'store'])->name('user.order.create');
 /*
  * Basket route
  */
@@ -88,5 +87,12 @@ Route::prefix('admin')->group(function () {
         Route::get('/{services}/edit', [\App\Http\Controllers\Admin\ServiceController::class, 'edit'])->name('admin.services.edit');
         Route::post('/{services}/edit', [\App\Http\Controllers\Admin\ServiceController::class, 'update'])->name('admin.services.update');
         Route::get('/{services}/destroy', [\App\Http\Controllers\Admin\ServiceController::class, 'destroy'])->name('admin.services.destroy');
+    });
+//    order
+    Route::prefix('order')->group(function (){
+        Route::get('/', [\App\Http\Controllers\Admin\OrderController::class, 'index'])->name('admin.orders');
+        Route::get('/{order}/edit', [\App\Http\Controllers\Admin\OrderController::class, 'edit'])->name('admin.orders.edit');
+        Route::post('/{order}/edit', [\App\Http\Controllers\Admin\OrderController::class, 'update'])->name('admin.orders.update');
+        Route::get('/{order}/destroy', [\App\Http\Controllers\Admin\OrderController::class, 'destroy'])->name('admin.orders.destroy');
     });
 });

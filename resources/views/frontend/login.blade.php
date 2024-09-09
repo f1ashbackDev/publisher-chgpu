@@ -1,7 +1,7 @@
 @extends('layouts.index')
 @section('content')
         <div class="container">
-            <div class="row">
+            <div class="d-flex mt-3">
                 <div class="col-login">
                     <h2>Вход</h2>
                     <form action="{{ route('user.login') }}" method="post">

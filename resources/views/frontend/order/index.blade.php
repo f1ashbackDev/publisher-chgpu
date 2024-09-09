@@ -5,7 +5,8 @@
         <div class="d-flex flex-row">
             <div class="w-50 me-3 mt-3">
                 @if(\Illuminate\Support\Facades\Auth::user())
-                    <form>
+                    <form method="post" action="{{ route('user.order.create') }}">
+                        @csrf
                         <div class="row-form">
                             <label>Фамилия</label>
                             <input class="form-control" name="surname" value="{{ \Illuminate\Support\Facades\Auth::user()->first_name }}">

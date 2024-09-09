@@ -13,4 +13,9 @@ class WebController extends Controller
             'products' => Product::with('images', 'category')->get(),
         ]);
     }
+
+    public function calculator()
+    {
+        return view('frontend.calculator.index');
+    }
 }
